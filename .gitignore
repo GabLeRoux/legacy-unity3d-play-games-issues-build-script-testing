@@ -1,0 +1,47 @@
+# Crashlytics
+Assets/StreamingAssets/crashlytics-build.properties.meta
+Assets/StreamingAssets/crashlytics-build.properties
+
+# Don't version android keystore files or other build data
+*.keystore
+*.exe
+*.dll%
+*.apk
+*.ipa
+
+# Some generic OS stuff
+.DS_Store
+Thumbs.db
+
+# Some other Generic Unity ignore
+*.csproj
+*.pidb
+*.sln
+*.userprefs
+*.unityproj
+*.suo
+*.cache
+/Library/
+/Temp/
+obj/
+!Assets/Plugins
+
+# Some anoying meta files
+Assets/UnityVS.meta
+Assets/UnityVS/Editor.meta
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll.meta
+Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
+Assembly-CSharp.csproj.user
+
+# Custom ignores
+/logs/*
+!/logs/.gitkeep
+/builds/*
+!/builds/.gitkeep
+!/builds/ios/.gitkeep
+!/builds/android/.gitkeep
+fastlane/report.xml
+*.dSYM.zip
+/Preview.html
+.env
