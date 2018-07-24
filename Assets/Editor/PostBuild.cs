@@ -15,14 +15,14 @@ public class PostBuild : MonoBehaviour
 		string script = "postbuild.sh";
 		string localPath = "Assets/Editor/" + script;
 		try {
-			var fullPath = Directory.GetCurrentDirectory () + Path.DirectorySeparatorChar + localPath.Replace ("/", Path.DirectorySeparatorChar.ToString ());
-			var bin = fullPath + script;
+			var bin = Directory.GetCurrentDirectory () + Path.DirectorySeparatorChar + localPath;
 			var process = new Process ();
 			process.StartInfo.FileName = bin;
 			process.StartInfo.WorkingDirectory = pathToBuiltProject;
 			Debug.Log ("PostBuild running: " + bin);
 			Debug.Log ("PostBuild WorkingDirectory: " + pathToBuiltProject);
-			process.Start ();
+			bool result = process.Start ();
+			Debug.Log ("PostBuild result: " + result);
 		} catch (Exception e) {
 			Debug.LogError (e);
 		}
